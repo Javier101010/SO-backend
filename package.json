@@ -2,7 +2,15 @@
   "name": "servicio-tiendavirtual",
   "version": "1.0.0",
   "private": true,
-  "description": "Servicio backend de la tienda virtual",
+  "description": "API REST de la tienda virtual de artesanías (Express + TypeScript + MySQL)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Javier101010/SO-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Javier101010/SO-backend/issues"
+  },
+  "homepage": "https://github.com/Javier101010/SO-backend#readme",
   "main": "dist/server.js",
   "type": "module",
   "scripts": {
@@ -11,7 +19,13 @@
     "typecheck": "tsc --noEmit",
     "start": "node --env-file-if-exists=.env dist/server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "express",
+    "typescript",
+    "mysql",
+    "api-rest",
+    "tienda-virtual"
+  ],
   "author": "",
   "license": "ISC",
   "engines": {

@@ -1,5 +1,29 @@
+# Dependencias
 node_modules/
-.env
-*.log
-coverage/
+.pnpm-store/
+
+# Compilación
 dist/
+*.tsbuildinfo
+
+# Variables de entorno (nunca subir credenciales)
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Tests / cobertura
+coverage/
+
+# Editores y sistema operativo
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
