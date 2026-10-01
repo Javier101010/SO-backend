@@ -1,0 +1,16 @@
+# Configuración de seguridad de pnpm para reducir el riesgo de ataques a la cadena de suministro
+
+# No instalar versiones publicadas hace menos de 1 día (en minutos)
+minimumReleaseAge: 1440
+
+# Falla si alguna dependencia intenta ejecutar scripts de instalación no aprobados
+strictDepBuilds: true
+
+# Bloquea subdependencias que vengan de fuentes no-registry (git, tarballs, etc.)
+blockExoticSubdeps: true
+
+# Evita instalar versiones cuya evidencia de confianza disminuyó respecto a versiones previas
+trustPolicy: no-downgrade
+
+# Solo las dependencias listadas aquí pueden ejecutar scripts postinstall
+onlyBuiltDependencies: []
