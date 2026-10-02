@@ -5,6 +5,11 @@ export const pool = mysql.createPool({
   ...env.db,
   waitForConnections: true,
   queueLimit: 0,
+  // Azure corta conexiones TCP inactivas (~4 min); keep-alive y cierre de inactivas lo evitan
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 10_000,
+  maxIdle: 2,
+  idleTimeout: 60_000,
 });
 
 export const verificarConexion = async (): Promise<void> => {
